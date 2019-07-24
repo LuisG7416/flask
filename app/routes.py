@@ -22,8 +22,8 @@ def sendBreakfast():
         return "You didn't fill out the form. I bet you say routes weird"
     else:
         userData = dict(request.form)
-        nickname = userData["nickname"][0]
-        breakfast = userData["breakfast"][0]
+        nickname = userData["nickname"]
+        breakfast = userData["breakfast"]
 
         
         return render_template("breakfast.html", nickname = model.shout(nickname), breakfast = model.shout(breakfast) )
