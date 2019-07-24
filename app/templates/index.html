@@ -1,13 +1,39 @@
 <html>
     <head>
         <title>Welcome!</title>
+             <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
     <body>
-        <h1>Hello world!</h1>
+         <nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">questionable webpage</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="https://pbs.twimg.com/media/De4aDAEU0AAr9qN.jpg">don't</a></li>
+        <li><a href="badges.html">click</a></li>
+        <li><a href="collapsible.html">these???</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+        <h1>Hello {{ user.name }}!</h1>
         <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" value="Enter your nickname"/>
-            <input type="submit" value="Submit"/>
+
+        <form method="post" action="/sendBreakfast">
+            <label for="nickname">What's your nickname?</label>
+            <input type='text' name='nickname'>
+            <label for="breakfast">What did you have for breakfast?</label>
+            <input type='text' name='breakfast'>
+            <input type='submit'>
         </form>
+
+            
+        <a href = "/secret" class="waves-effect waves-dark btn-large" >Cake?</a>
+        <a href = "/howdy" class="waves-effect waves-light btn-large">Here's a pensive yeehaw</a>
     </body>
 </html>
